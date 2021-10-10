@@ -1,0 +1,102 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0; 
+    }
+    html{
+        height: 100%;
+    }
+    
+    body{
+        font-family: "sans-serif", sans-serif; 
+        font-size: 1,2rem; 
+        min-height: 100%;
+    }
+    
+    .grid-container {
+        box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+        border-radius: 10px; 
+        padding: 10px;
+        text-align: center;
+    }
+    .header {
+        grid-area: header;
+        background-color: rgb(137, 212, 231); 
+    }
+    .navbar {
+        grid-area: navbar;
+        background-color: rgb(177, 192, 236);
+    }
+    .sidebar {
+        grid-area: sidebar;
+        background-color: rgb(214, 224, 224);
+    }
+    .main{
+        grid-area: main; 
+        background-color: rgb(99, 214, 223);
+    }
+
+    .main2{
+        grid-area: main2; 
+        background-color: rgb(158, 206, 221);
+    }
+    .footer {
+        grid-area: footer;
+        background-color: rgb(116, 148, 180);
+    }
+    .grid-container {
+        display: grid;
+        gap: 10px;
+        grid-template-areas: 
+        "header"
+        "navbar"
+        "main"
+        "main2"
+        "sidebar"
+        "footer";
+    
+    }
+    
+    @media (min-width: 600px) { 
+        .grid-container {
+           /* grid-template-columns: 200px auto;
+            grid-template-rows: 100px 50px auto 100px;
+           /* grid-template-areas: 
+            "header header"
+            "navbar navbar"
+            "sidebar main"
+            "footer footer";*/
+    
+            grid-template: 
+            "header header" 100px 
+            "navbar navbar" 50px
+            "sidebar main" auto
+            "footer footer" 100px / 
+            200px   auto;
+        }
+    }
+    
+    @media (min-width: 900px) { 
+        .grid-container {       
+            grid-template: 
+            "header header header"  100px 
+            "navbar navbar  sidebar" auto
+            "main  main2  sidebar"  200px
+            "footer footer footer" 100px / 
+            auto  auto   200px;
+        }
+    } 
+   h1{
+       font-family: cursive;
+       color: rgb(86, 119, 119);
+   }
+   h4 {
+       font-family: cursive;
+       color: rgb(86, 119, 119);
+   }
+   h3{
+       font-family: cursive;
+       color: lightslategray;
+   }
+   
